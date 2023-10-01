@@ -1,9 +1,12 @@
-<html>
-<h1>Welcome to Kitchen Home page!</h1>
-<h3>Kitchen content:</h3>
-<ul>
-  <li>Number of cooks: {{ num_cooks }}</li>
-  <li>Number of dishes: {{ num_dishes }}</li>
-  <li>Number of dish types: {{ num_dishtypes }}</li>
-</ul>
-</html>
+{% extends "base.html" %}
+
+{% block content %}
+  <h1>Restaurant Kitchen</h1>
+
+  <h4>Content: </h4>
+  <ul>
+    <li>Number of cooks: {{ num_cooks }}</li>
+    <li>Number of dishes: {{ num_dishes }}</li>
+    <li>Number of dishtypes: {{ num_dishtypes }}</li>
+  </ul>
+{% endblock %}
