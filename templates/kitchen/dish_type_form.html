@@ -2,11 +2,11 @@
 {% load crispy_forms_filters %}
 
 {% block content %}
-  <h1>Create Dish Type</h1>
+  <h1>{{ object|yesno:"Update,Create" }} Dish Type</h1>
   <br>
   <form action="" method="post" novalidate>
     {% csrf_token %}
     {{ form|crispy }}
-  <input type="submit" class="btn btn-success" value="Create">
+  <input type="submit" class="btn btn-success" value="{{ object|yesno:'Update,Create' }}">
   </form>
 {% endblock %}
