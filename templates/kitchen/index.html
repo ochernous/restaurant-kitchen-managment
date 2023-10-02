@@ -5,8 +5,8 @@
 
   <h4>Content: </h4>
   <ul>
-    <li>Number of cooks: {{ num_cooks }}</li>
-    <li>Number of dishes: {{ num_dishes }}</li>
-    <li>Number of dishtypes: {{ num_dishtypes }}</li>
+    <li>Number of cooks: <a href="{% url 'kitchen:cook-list' %}">{{ num_cooks }}</a></li>
+    <li>Number of dishes: <a href="{% url 'kitchen:dish-list' %}">{{ num_dishes }}</a></li>
+    <li>Number of dish types: <a href="{% url 'kitchen:dish-type-list' %}">{{ num_dishtypes }}</a></li>
   </ul>
 {% endblock %}
