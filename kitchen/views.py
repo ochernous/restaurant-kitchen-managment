@@ -45,6 +45,12 @@ class DishDetailView(LoginRequiredMixin, generic.DetailView):
     queryset = Dish.objects.select_related("dish_type")
 
 
+class DishCreateView(LoginRequiredMixin, generic.CreateView):
+    model = Dish
+    fields = "__all__"
+    success_url = reverse_lazy("kitchen:dish-list")
+
+
 class CookListView(LoginRequiredMixin, generic.ListView):
     model = Cook
     paginate_by = 5
