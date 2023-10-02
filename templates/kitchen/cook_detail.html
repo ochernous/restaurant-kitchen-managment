@@ -10,7 +10,8 @@
     <h5>Dishes:</h5>
       {% for dish in cook.dishes.all %}
         <hr>
-        <p>{{ dish.id}} {{ dish.name }} ({{ dish.dish_type.name }})</p>
+        <p>id: {{ dish.id}}</p>
+        <p><a href="{% url 'kitchen:dish-detail' dish.pk %}">{{ dish.name }}</a> ({{ dish.dish_type.name }})</p>
       {% empty %}
         <p>Dish is temporarily unavailable</p>
       {% endfor %}
