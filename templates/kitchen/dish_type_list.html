@@ -2,6 +2,9 @@
 
 {% block content %}
   <h1>Dish Type List</h1>
+  <a href="{% url 'kitchen:dish-type-create' %}" class="btn btn-secondary">Create new</a>
+  <br>
+  <br>
 
   {% if dish_type_list %}
     <ul>
