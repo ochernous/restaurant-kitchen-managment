@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+
+{% block content %}
+  <h1>Restaurant Kitchen</h1>
+  <br>
+  <h3>Cook: {{ cook.first_name }} {{ cook.last_name }}</h3>
+  <br>
+  <div class="ml-5">
+    <h5>Dishes:</h5>
+      {% for dish in cook.dishes.all %}
+        <hr>
+        <p>{{ dish.id}} {{ dish.name }} ({{ dish.dish_type.name }})</p>
+      {% empty %}
+        <p>Dish is temporarily unavailable</p>
+      {% endfor %}
+  </div>
+
+{% endblock %}
