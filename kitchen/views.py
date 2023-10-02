@@ -1,4 +1,3 @@
-from django.contrib.auth.decorators import login_required
 from django.contrib.auth.mixins import LoginRequiredMixin
 from django.http import HttpRequest, HttpResponse
 from django.shortcuts import render
@@ -8,10 +7,14 @@ from kitchen.models import Cook, Dish, DishType
 
 
 def index(request: HttpRequest) -> HttpResponse:
+    num_visits = request.session.get("num_visits", 0)
+    request.session["num_visits"] = num_visits + 1
+
     context = {
         "num_cooks": Cook.objects.count(),
         "num_dishes": Dish.objects.count(),
-        "num_dishtypes": DishType.objects.count()
+        "num_dishtypes": DishType.objects.count(),
+        "num_visits": num_visits + 1
     }
     return render(request, "kitchen/index.html", context=context)
 

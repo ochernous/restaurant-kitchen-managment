@@ -9,4 +9,8 @@
     <li>Number of dishes: <a href="{% url 'kitchen:dish-list' %}">{{ num_dishes }}</a></li>
     <li>Number of dish types: <a href="{% url 'kitchen:dish-type-list' %}">{{ num_dishtypes }}</a></li>
   </ul>
+  <div class="bottom-text">
+    <p class="text-muted">You have visited Home page {{ num_visits }} time{{ num_visits|pluralize }}</p>
+  </div>
+
 {% endblock %}
