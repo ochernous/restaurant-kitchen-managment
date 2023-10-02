@@ -2,6 +2,9 @@
 
 {% block content %}
   <h1>Cook List</h1>
+  <a href="{% url 'kitchen:cook-create' %}" class="btn btn-secondary">Create new</a>
+  <br>
+  <br>
 
   {% if cook_list %}
     <ul>
