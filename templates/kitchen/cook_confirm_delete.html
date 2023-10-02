@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+
+{% block content %}
+  <h1>Delete Cook?</h1>
+
+  <p>Are you sure you want to delete cook: {{ cook.username }}?</p>
+  <form action="" method="post">
+    {% csrf_token %}
+    <input type="submit" value="Yes, delete" class="btn btn-danger">
+    <a href="{% url 'kitchen:cook-detail' cook.pk %}" class="btn btn-success">No, cancel</a>
+  </form>
+{% endblock %}
