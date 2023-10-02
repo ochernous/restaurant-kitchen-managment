@@ -6,12 +6,16 @@
   <h4>Dish: {{ dish.name }}</h4>
   <br>
   <h5>Dish Type: {{ dish.dish_type.name }}</h5>
+  <a href="{% url 'kitchen:dish-update' dish.pk %}" class="btn btn-secondary">Update</a>
+  <a href="{% url 'kitchen:dish-delete' dish.pk %}" class="btn btn-secondary">Delete</a>
+  <br>
+  <br>
   <br>
   <div class="ml-5">
     <h6>Cooks:</h6>
       {% for cook in dish.cooks.all %}
         <hr>
-        <p>id: {{ cook.id }} - <a href="{% url 'kitchen:cook-detail' cook.pk %}">{{ cook.username }}</a></p>
+        <p>id: {{ cook.pk }} - <a href="{% url 'kitchen:cook-detail' cook.pk %}">{{ cook.username }}</a></p>
         <p>{{ cook.first_name }} {{ cook.last_name }} (years of experience: {{ cook.years_of_experience }})</p>
       {% empty %}
         <p>Cook is temporarily unavailable</p>
