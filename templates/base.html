@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head> 
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+<title>
+    Kitchen Management System {% block title %}{% endblock %} | Mate Restaurant
+</title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="title" content="Volt - Free Bootstrap 5 Dashboard">
+<meta name="author" content="Themesberg">
+<meta name="description" content="Volt Pro is a Premium Bootstrap 5 Admin Dashboard">
+<meta name="keywords" content="bootstrap 5, bootstrap, bootstrap 5 admin dashboard, bootstrap 5 dashboard"/>
+<link rel="canonical" href="https://appseed.us/admin-dashboards/django-dashboard-volt">
+
+<link rel="icon" type="image/png" sizes="32x32" href="{{ ASSETS_ROOT }}/img/favicon/favicon-32x32.png">
+
+<link type="text/css" href="{{ ASSETS_ROOT }}/vendor/sweetalert2/dist/sweetalert2.min.css" rel="stylesheet">
+
+<link type="text/css" href="{{ ASSETS_ROOT }}/vendor/notyf/notyf.min.css" rel="stylesheet">
+<link type="text/css" href="{{ ASSETS_ROOT }}/css/volt.css" rel="stylesheet">
+
+{% block stylesheets %}{% endblock stylesheets %}
+
+</head>
+<body>
+
+    {% block sidebar %}
+      {% include 'includes/sidebar.html' %}
+    {% endblock %}
+
+    <main class="content">
+
+      {% include 'includes/navigation.html' %}
+
+      {% block content %}
+      {% endblock content %}
+
+      {% block pagination %}
+          {% include "includes/pagination.html" %}
+      {% endblock %}
+
+    </main>
+
+  {% include 'includes/scripts.html' %}
+    
+  {% block javascripts %}{% endblock javascripts %}
+      
+</body>
+</html>
