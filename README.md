@@ -1,3 +1,5 @@
+![](logo.jpg)
+
 # Restaurant Kitchen Management System 
 
 Project for managing restaurant kitchen with cooks dishes and types of dishes
