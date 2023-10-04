@@ -4,7 +4,14 @@ from django.shortcuts import render
 from django.urls import reverse_lazy
 from django.views import generic
 
-from kitchen.forms import CookCreationForm, DishForm, CookUpdateForm, DishTypeSearchForm, DishSearchForm, CookSearchForm
+from kitchen.forms import (
+    CookCreationForm,
+    DishForm,
+    CookUpdateForm,
+    DishTypeSearchForm,
+    DishSearchForm,
+    CookSearchForm,
+)
 from kitchen.models import Cook, Dish, DishType
 
 
@@ -16,7 +23,7 @@ def index(request: HttpRequest) -> HttpResponse:
         "num_cooks": Cook.objects.count(),
         "num_dishes": Dish.objects.count(),
         "num_dishtypes": DishType.objects.count(),
-        "num_visits": num_visits + 1
+        "num_visits": num_visits + 1,
     }
     return render(request, "kitchen/index.html", context=context)
 
@@ -30,9 +37,7 @@ class DishTypeListView(LoginRequiredMixin, generic.ListView):
     def get_context_data(self, *, object_list=None, **kwargs):
         context = super(DishTypeListView, self).get_context_data(**kwargs)
         name = self.request.GET.get("name", "")
-        context["search_form"] = DishTypeSearchForm(
-            initial={"name": name}
-        )
+        context["search_form"] = DishTypeSearchForm(initial={"name": name})
         return context
 
     def get_queryset(self):
@@ -75,9 +80,7 @@ class DishListView(LoginRequiredMixin, generic.ListView):
     def get_context_data(self, *, object_list=None, **kwargs):
         context = super(DishListView, self).get_context_data(**kwargs)
         name = self.request.GET.get("name", "")
-        context["search_form"] = DishSearchForm(
-            initial={"name": name}
-        )
+        context["search_form"] = DishSearchForm(initial={"name": name})
         return context
 
     def get_queryset(self):
@@ -126,7 +129,9 @@ class CookListView(LoginRequiredMixin, generic.ListView):
         queryset = Cook.objects.all()
         form = CookSearchForm(self.request.GET)
         if form.is_valid():
-            return queryset.filter(username__icontains=form.cleaned_data["username"])
+            return queryset.filter(
+                username__icontains=form.cleaned_data["username"]
+            )
         return queryset
 
 
