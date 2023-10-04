@@ -1,24 +1,37 @@
 {% extends "base.html" %}
 
 {% block content %}
-  <h1>Restaurant Kitchen</h1>
+  <hr>
+  <h1>{{ cook.first_name }} {{ cook.last_name }} ({{ cook.username }})</h1>
   <br>
-  <h3>Cook: {{ cook.first_name }} {{ cook.last_name }}</h3>
   <h5>Years of experience: {{ cook.years_of_experience }}</h5>
+  <br>
+  <h5>Email: {{ cook.email }}</h5>
+  <br>
   <a href="{% url 'kitchen:cook-update' cook.pk %}" class="btn btn-secondary">Update</a>
-  <a href="{% url 'kitchen:cook-delete' cook.pk %}" class="btn btn-secondary">Delete</a>
+  <a href="{% url 'kitchen:cook-delete' cook.pk %}" class="btn btn-reddit">Delete</a>
   <br>
   <br>
 
-  <div class="ml-5">
-    <h5>Dishes:</h5>
+  {% if cook.dishes.all %}
+    <table class="table">
+      <tr>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Price</th>
+        <th>Dish Type</th>
+      </tr>
       {% for dish in cook.dishes.all %}
-        <hr>
-        <p>id: {{ dish.id}}</p>
-        <p><a href="{% url 'kitchen:dish-detail' dish.pk %}">{{ dish.name }}</a> ({{ dish.dish_type.name }})</p>
-      {% empty %}
-        <p>Dish is temporarily unavailable</p>
+        <tr>
+          <td>{{ dish.pk }}</td>
+          <td><a href="{% url 'kitchen:dish-detail' dish.pk %}" style="color: mediumblue;">{{ dish.name }}</a></td>
+          <td>{{ dish.price }}</td>
+          <td>{{ dish.dish_type.name }}</td>
+        </tr>
       {% endfor %}
-  </div>
+    </table>
+  {% else %}
+    <h4>There are no Dishes</h4>
+  {% endif %}
 
 {% endblock %}

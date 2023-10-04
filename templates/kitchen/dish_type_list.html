@@ -2,22 +2,35 @@
 {% load crispy_forms_filters %}
 
 {% block content %}
+  <hr>
   <h1>Dish Type List</h1>
   <a href="{% url 'kitchen:dish-type-create' %}" class="btn btn-secondary">Create new</a>
   <br>
   <br>
-  <form method="get" action="" class="form-inline">
-    {{ search_form|crispy }}
-    <input type="submit" value="Search" class="btn btn-secondary">
+  <br>
+  <form method="get" action="" class="navbar-search form-inline" id="navbar-search-main">
+    <div class="input-group input-group-merge search-bar">
+      {{ search_form|crispy }}
+      <style>
+        .search-bar input[type="text"] {
+          height: 40px;
+        }
+        .search-bar input[type="submit"] {
+          height: 40px;
+        }
+      </style>
+      <input type="submit" value="🔍" class="btn btn-gray-200 btn">
+    </div>
   </form>
+  <br>
 
-  {% if dish_type_list %}
+{% if dish_type_list %}
     <ul>
       {% for dish_type in dish_type_list %}
-        <li><a href="{% url 'kitchen:dish-type-detail' dish_type.pk %}">{{ dish_type.name }}</a></li>
+        <li><a href="{% url 'kitchen:dish-type-detail' dish_type.pk %}" style="color: mediumblue">{{ dish_type.name }}</a></li>
       {% endfor %}
     </ul>
   {% else %}
-    <p>There are no Dish Types in the kitchen yet!</p>
+    <h4>There are no Dish Types</h4>
   {% endif %}
 {% endblock %}

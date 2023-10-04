@@ -2,22 +2,47 @@
 {% load crispy_forms_filters %}
 
 {% block content %}
+  <hr>
   <h1>Dish List</h1>
   <a href="{% url 'kitchen:dish-create' %}" class="btn btn-secondary">Create new</a>
   <br>
   <br>
-  <form method="get" action="" class="form-inline">
-    {{ search_form|crispy }}
-    <input type="submit" value="Search" class="btn btn-secondary">
+  <br>
+  <form method="get" action="" class="navbar-search form-inline" id="navbar-search-main">
+    <div class="input-group input-group-merge search-bar">
+      {{ search_form|crispy }}
+      <style>
+        .search-bar input[type="text"] {
+          height: 40px;
+        }
+        .search-bar input[type="submit"] {
+          height: 40px;
+        }
+      </style>
+      <input type="submit" value="🔍" class="btn btn-gray-200">
+    </div>
   </form>
+  <br>
 
   {% if dish_list %}
-    <ul>
+    <table class="table">
+      <tr>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Price</th>
+        <th>Dish Type</th>
+      </tr>
       {% for dish in dish_list %}
-        <li><a href="{% url 'kitchen:dish-detail' dish.pk %}">{{ dish.name }}</a> - (price: {{ dish.price }}, type: {{ dish.dish_type }})</li>
+        <tr>
+          <td>{{ dish.pk }}</td>
+          <td><a href="{% url 'kitchen:dish-detail' dish.pk %}" style="color: mediumblue;">{{ dish.name }}</a></td>
+          <td>{{ dish.price }}</td>
+          <td>{{ dish.dish_type }}</td>
+        </tr>
       {% endfor %}
-    </ul>
+    </table>
   {% else %}
-    <p>There are no Dishes in the kitchen yet!</p>
+    <h4>There are no Dishes</h4>
   {% endif %}
+
 {% endblock %}

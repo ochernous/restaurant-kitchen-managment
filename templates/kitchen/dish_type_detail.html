@@ -1,22 +1,31 @@
 {% extends "base.html" %}
 
 {% block content %}
-  <h1>Restaurant Kitchen</h1>
+  <hr>
+  <h1>{{ dishtype }}</h1>
   <br>
-  <h3>Dish Type: {{ dishtype }}</h3>
   <a href="{% url 'kitchen:dish-type-update' dishtype.pk %}" class="btn btn-secondary">Update</a>
-  <a href="{% url 'kitchen:dish-type-delete' dishtype.pk %}" class="btn btn-secondary">Delete</a>
+  <a href="{% url 'kitchen:dish-type-delete' dishtype.pk %}" class="btn btn-reddit">Delete</a>
   <br>
   <br>
-  <div class="ml-5">
-    <h5>Dishes:</h5>
-      {% for dish in dishtype.dishes.all %}
-        <hr>
-        <p>id: {{ dish.pk }}</p>
-        <p><a href="{% url 'kitchen:dish-detail' dish.pk %}">{{ dish.name }}</a></p>
-      {% empty %}
-        <p>Dish is temporarily unavailable</p>
-      {% endfor %}
-  </div>
+  <br>
 
+  {% if dishtype.dishes.all %}
+    <table class="table">
+      <tr>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Price</th>
+      </tr>
+      {% for dish in dishtype.dishes.all %}
+        <tr>
+          <td>{{ dish.pk }}</td>
+          <td><a href="{% url 'kitchen:dish-detail' dish.pk %}" style="color: mediumblue;">{{ dish.name }}</a></td>
+          <td>{{ dish.price }}</td>
+        </tr>
+      {% endfor %}
+    </table>
+  {% else %}
+    <h4>There are no Dishes</h4>
+  {% endif %}
 {% endblock %}
