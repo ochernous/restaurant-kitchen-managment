@@ -138,6 +138,7 @@ class CookDetailView(LoginRequiredMixin, generic.DetailView):
 class CookCreateView(LoginRequiredMixin, generic.CreateView):
     model = Cook
     form_class = CookCreationForm
+    success_url = reverse_lazy("kitchen:cook-list")
 
 
 class CookUpdateView(LoginRequiredMixin, generic.UpdateView):
@@ -148,3 +149,7 @@ class CookUpdateView(LoginRequiredMixin, generic.UpdateView):
 class CookDeleteView(LoginRequiredMixin, generic.DeleteView):
     model = Cook
     success_url = reverse_lazy("kitchen:cook-list")
+
+
+def under_construction_view(request: HttpRequest) -> HttpResponse:
+    return render(request, "kitchen/under_construction.html")
