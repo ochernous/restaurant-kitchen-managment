@@ -40,7 +40,8 @@ INSTALLED_APPS = [
     "debug_toolbar",
     "kitchen",
     "crispy_forms",
-    "crispy_bootstrap4",
+    "crispy_bootstrap5",
+    # "crispy_bootstrap4",
 ]
 
 MIDDLEWARE = [
@@ -68,6 +69,7 @@ TEMPLATES = [
                 "django.template.context_processors.request",
                 "django.contrib.auth.context_processors.auth",
                 "django.contrib.messages.context_processors.messages",
+                "kitchen.context_processors.cfg_assets_root",
             ],
         },
     },
@@ -140,4 +142,8 @@ INTERNAL_IPS = [
     "127.0.0.1",
 ]
 
-CRISPY_TEMPLATE_PACK = 'bootstrap4'
+CRISPY_ALLOWED_TEMPLATE_PACKS = "bootstrap5"
+
+CRISPY_TEMPLATE_PACK = 'bootstrap5'
+
+ASSETS_ROOT = "/static/assets"
