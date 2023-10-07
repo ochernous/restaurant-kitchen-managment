@@ -18,8 +18,18 @@ python -m venv venv
 venv\Scripts\activate (on Windows)
 source venv/bin/activate (on macOS)
 pip install -r requirements.txt
+python manage.py migrate
 python manage.py runserver
 ```
+Use the following command to load prepared data from fixture to test and debug your code:
+```shell
+python manage.py loaddata restaurant_kitchen_db_data.json
+```
+After loading data from fixture you can use following superuser (or create another one by yourself):
+
+Login:```admin.user```
+
+Password:```18OeMrVrAs```
 
 ## Description
 This project is designed to improve communication and establish rules among cooks in the kitchen. It allows cooks to 
