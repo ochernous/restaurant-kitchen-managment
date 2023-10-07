@@ -1,0 +1,614 @@
+[
+{
+  "model": "kitchen.dishtype",
+  "pk": 1,
+  "fields": {
+    "name": "pasta"
+  }
+},
+{
+  "model": "kitchen.dishtype",
+  "pk": 2,
+  "fields": {
+    "name": "pizza"
+  }
+},
+{
+  "model": "kitchen.dishtype",
+  "pk": 3,
+  "fields": {
+    "name": "cake"
+  }
+},
+{
+  "model": "kitchen.dishtype",
+  "pk": 4,
+  "fields": {
+    "name": "dessert"
+  }
+},
+{
+  "model": "kitchen.dishtype",
+  "pk": 10,
+  "fields": {
+    "name": "seafood"
+  }
+},
+{
+  "model": "kitchen.dishtype",
+  "pk": 13,
+  "fields": {
+    "name": "soup"
+  }
+},
+{
+  "model": "kitchen.dishtype",
+  "pk": 14,
+  "fields": {
+    "name": "salad"
+  }
+},
+{
+  "model": "kitchen.dishtype",
+  "pk": 15,
+  "fields": {
+    "name": "main course"
+  }
+},
+{
+  "model": "kitchen.dishtype",
+  "pk": 16,
+  "fields": {
+    "name": "dumplings"
+  }
+},
+{
+  "model": "kitchen.dishtype",
+  "pk": 17,
+  "fields": {
+    "name": "sushi"
+  }
+},
+{
+  "model": "kitchen.cook",
+  "pk": 4,
+  "fields": {
+    "password": "pbkdf2_sha256$600000$C47caCN2DLLgYn8AArg3Kv$yaIX11u5my8U/zbsbgM0rbLdnLj1nca25kGTn8BnOKc=",
+    "last_login": "2023-10-07T14:19:30.562Z",
+    "is_superuser": false,
+    "username": "emma.bianchi",
+    "first_name": "Emma",
+    "last_name": "Bianchi",
+    "email": "emma@bianchi.com",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2023-10-01T09:42:03Z",
+    "years_of_experience": 4,
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "kitchen.cook",
+  "pk": 6,
+  "fields": {
+    "password": "pbkdf2_sha256$600000$WYsEbNfBBoCOw44jLJebx9$ESVinzr++4ox+WCc0ygj8/5sKGeBd1kRBL4jz6bydaY=",
+    "last_login": "2023-10-07T14:20:44.914Z",
+    "is_superuser": false,
+    "username": "enrique.romero",
+    "first_name": "Enrique",
+    "last_name": "Romero",
+    "email": "enrique@romero.com",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2023-10-01T09:45:21Z",
+    "years_of_experience": 5,
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "kitchen.cook",
+  "pk": 8,
+  "fields": {
+    "password": "pbkdf2_sha256$600000$2xf6F5TMJmyumLw03nloMk$CXEi7CQWy7cSQ0rAaMikFpc311c29ags818dnjX753g=",
+    "last_login": "2023-10-07T14:22:44.313Z",
+    "is_superuser": false,
+    "username": "martin.zima",
+    "first_name": "Martin",
+    "last_name": "Zima",
+    "email": "martin@zima.com",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2023-10-01T11:17:46.066Z",
+    "years_of_experience": 4,
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "kitchen.cook",
+  "pk": 15,
+  "fields": {
+    "password": "pbkdf2_sha256$600000$hl62NpPP6hkmNNq0wWDtkB$sdPhN5PBJl6ebG9jtZ577Aaq9W04S8fMO1Ol//hQn8E=",
+    "last_login": "2023-10-07T14:48:41Z",
+    "is_superuser": true,
+    "username": "admin.user",
+    "first_name": "Matteo",
+    "last_name": "Rossi",
+    "email": "admin@user.com",
+    "is_staff": true,
+    "is_active": true,
+    "date_joined": "2023-10-07T14:48:05Z",
+    "years_of_experience": 7,
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "kitchen.cook",
+  "pk": 17,
+  "fields": {
+    "password": "pbkdf2_sha256$600000$zkhjMPhHvnilo0vpQ0NdZF$BvcwEv9868BNiyTntQBzKZWKerxXLTNglsz8Jtwitjg=",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "andrii.shevchenko",
+    "first_name": "Andrii",
+    "last_name": "Shevchenko",
+    "email": "andrii@shevchenko.com",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2023-10-07T16:45:22.318Z",
+    "years_of_experience": 6,
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "kitchen.cook",
+  "pk": 18,
+  "fields": {
+    "password": "pbkdf2_sha256$600000$idt5q6xHnYfcaJgduBKHwH$9cMLV+HUoJ8ovzKoaulUOLN/spRkoBmq8T+VoZRi8Ng=",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "tereza.kowalski",
+    "first_name": "Tereza",
+    "last_name": "Kowalski",
+    "email": "tereza@kowalski.com",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2023-10-07T16:48:13.790Z",
+    "years_of_experience": 3,
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "kitchen.cook",
+  "pk": 19,
+  "fields": {
+    "password": "pbkdf2_sha256$600000$mTMRxMsP04HRZj7bs8g4cm$orpt7+/MUoWb7HItFdCXKz+W0wR/n0JPxAGu5AqNopI=",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "sarah.goldberg",
+    "first_name": "Sarah",
+    "last_name": "Goldberg",
+    "email": "sarah@goldberg.com",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2023-10-07T16:50:06.700Z",
+    "years_of_experience": 3,
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "kitchen.cook",
+  "pk": 20,
+  "fields": {
+    "password": "pbkdf2_sha256$600000$yfRDJVvuDoU5Sh1BXT86AV$DxZiLHmNEpFY14SkpLnqODDWM4ge9HYagDhaE3J+8yU=",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "victoria.smith",
+    "first_name": "Victoria",
+    "last_name": "Smith",
+    "email": "victoria@smith.com",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2023-10-07T16:52:48.532Z",
+    "years_of_experience": 2,
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "kitchen.cook",
+  "pk": 21,
+  "fields": {
+    "password": "pbkdf2_sha256$600000$50SSUZcgzrZ0LeHvcGzqFA$8uJ9sIOMMD60nugr4wyZ2ZfvCvSNrbaSI48l0dnjIz4=",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "anna.muller",
+    "first_name": "Anna",
+    "last_name": "Muller",
+    "email": "anna@muller.com",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2023-10-07T19:04:27.058Z",
+    "years_of_experience": 0,
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "kitchen.dish",
+  "pk": 1,
+  "fields": {
+    "name": "Lasagna",
+    "description": "Rich, cheesy, and satisfying, lasagna is a classic Italian dish that is loved by people of all ages. It is made with layers of pasta sheets, meat sauce, béchamel sauce, and cheese, and is typically baked until the pasta is cooked through and the cheese is melted and bubbly.\r\nLasagna is a popular dish for both special occasions and everyday meals. It is often served with a side salad or garlic bread.",
+    "price": "15.50",
+    "dish_type": 1,
+    "cooks": [
+      15,
+      4
+    ]
+  }
+},
+{
+  "model": "kitchen.dish",
+  "pk": 2,
+  "fields": {
+    "name": "Carbonara",
+    "description": "A rich and flavorful pasta dish made with spaghetti, guanciale, eggs, and Pecorino Romano cheese. The sauce is thickened with the heat of the pasta and the eggs, and the guanciale adds a smoky, salty depth of flavor. Finished with a generous sprinkling of black pepper, carbonara is a truly satisfying and delicious dish.",
+    "price": "16.20",
+    "dish_type": 1,
+    "cooks": [
+      15,
+      4
+    ]
+  }
+},
+{
+  "model": "kitchen.dish",
+  "pk": 3,
+  "fields": {
+    "name": "Margherita",
+    "description": "The Margherita pizza is a classic Italian pizza that is made with a simple yet delicious combination of ingredients: San Marzano tomato sauce, fresh mozzarella cheese, and fresh basil leaves. The pizza is often garnished with a drizzle of olive oil and a sprinkle of salt and pepper.",
+    "price": "14.90",
+    "dish_type": 2,
+    "cooks": [
+      15,
+      4,
+      6,
+      19
+    ]
+  }
+},
+{
+  "model": "kitchen.dish",
+  "pk": 4,
+  "fields": {
+    "name": "Quattro Formaggi",
+    "description": "Quattro formaggi pizza, also known as four cheese pizza, is a classic Italian pizza that is made with a combination of four different types of cheese. The most common cheeses used in quattro formaggi pizza are mozzarella, gorgonzola, fontina, and Parmesan. The pizza is often garnished with a drizzle of olive oil and a sprinkle of black pepper.",
+    "price": "14.70",
+    "dish_type": 2,
+    "cooks": [
+      15,
+      4,
+      6,
+      20
+    ]
+  }
+},
+{
+  "model": "kitchen.dish",
+  "pk": 5,
+  "fields": {
+    "name": "Tiramisu",
+    "description": "A classic Italian dessert made with ladyfingers dipped in espresso and layered with a whipped mixture of mascarpone cheese, eggs, and sugar. The dessert is often dusted with cocoa powder before serving.\r\nTiramisu is a rich and decadent dessert that is perfect for any occasion. The ladyfingers are soft and spongy, and the mascarpone filling is light and airy. The espresso adds a rich coffee flavor, and the cocoa powder adds a touch of bitterness.",
+    "price": "9.80",
+    "dish_type": 4,
+    "cooks": [
+      15,
+      4,
+      6
+    ]
+  }
+},
+{
+  "model": "kitchen.dish",
+  "pk": 8,
+  "fields": {
+    "name": "Torta Caprese",
+    "description": "A rich and decadent flourless chocolate cake from the island of Capri, Italy. Made with just a few simple ingredients, including dark chocolate, ground almonds, eggs, butter, and sugar, Torta Caprese is moist and fudgy on the inside with a thin, crispy crust on the outside.\r\nDust with powdered sugar and serve with a scoop of vanilla ice cream or whipped cream for a truly irresistible dessert.",
+    "price": "9.10",
+    "dish_type": 3,
+    "cooks": [
+      15,
+      4,
+      6
+    ]
+  }
+},
+{
+  "model": "kitchen.dish",
+  "pk": 16,
+  "fields": {
+    "name": "Kyiv Cake",
+    "description": "A classic Ukrainian dessert made with layers of delicate hazelnut sponge cake, a crunchy hazelnut meringue layer, and a rich buttercream frosting. The cake is often decorated with chocolate shavings, hazelnuts, and candied fruit.\r\nKyiv Cake is a popular dessert for special occasions and is known for its unique flavor and texture. The hazelnut sponge cake is light and airy, while the meringue layer is crunchy and sweet. The buttercream frosting is rich and creamy, and perfectly complements the other flavors in the cake.",
+    "price": "9.90",
+    "dish_type": 3,
+    "cooks": [
+      17,
+      8,
+      18
+    ]
+  }
+},
+{
+  "model": "kitchen.dish",
+  "pk": 17,
+  "fields": {
+    "name": "Victoria Sponge Cake",
+    "description": "A classic English dessert made with two layers of light and fluffy sponge cake sandwiched together with a generous layer of strawberry jam and whipped cream. The cake is often dusted with powdered sugar and served with a side of fresh berries.\r\nVictoria Sponge Cake is a popular dessert for all occasions and is known for its simple yet delicious flavor. The sponge cake is light and airy, while the strawberry jam and whipped cream add sweetness and richness.",
+    "price": "9.30",
+    "dish_type": 3,
+    "cooks": [
+      4,
+      19,
+      18,
+      20
+    ]
+  }
+},
+{
+  "model": "kitchen.dish",
+  "pk": 18,
+  "fields": {
+    "name": "Nalysnyky",
+    "description": "A traditional Ukrainian dish made with thin pancakes filled with a variety of sweet or savory fillings. The pancakes are typically made with flour, eggs, milk, and sugar, and can be filled with a variety of ingredients, such as cheese, fruit, meat, and mushrooms.\r\nNalysnyky are a popular dish for breakfast, lunch, or dinner, and can be served as either a main course or a side dish. They are often served with a dollop of sour cream, yogurt, or jam.",
+    "price": "9.50",
+    "dish_type": 4,
+    "cooks": [
+      17,
+      8,
+      18
+    ]
+  }
+},
+{
+  "model": "kitchen.dish",
+  "pk": 19,
+  "fields": {
+    "name": "Sernik",
+    "description": "A classic Polish cheesecake made with a rich and creamy filling made from quark cheese, eggs, and sugar. The cheesecake is often baked in a springform pan and served with a dusting of powdered sugar and a dollop of sour cream or whipped cream.\r\nSernik is a popular dessert for all occasions and is known for its rich and creamy texture and its delicate flavor. The quark cheese gives the cheesecake a dense and creamy texture, while the eggs and sugar add sweetness and richness.",
+    "price": "9.20",
+    "dish_type": 4,
+    "cooks": [
+      17,
+      19,
+      18
+    ]
+  }
+},
+{
+  "model": "kitchen.dish",
+  "pk": 20,
+  "fields": {
+    "name": "Pulpo a la Gallega",
+    "description": "Pulpo a la Gallega is a traditional Galician dish made with boiled octopus, boiled potatoes, coarse salt, paprika, and olive oil. The octopus is typically cooked in a large pot of water until it is tender, and the potatoes are boiled in a separate pot until they are soft. The octopus and potatoes are then served together on a wooden plate, and the coarse salt, paprika, and olive oil are drizzled over top.",
+    "price": "17.50",
+    "dish_type": 10,
+    "cooks": [
+      15,
+      6
+    ]
+  }
+},
+{
+  "model": "kitchen.dish",
+  "pk": 21,
+  "fields": {
+    "name": "Paella de Mariscos",
+    "description": "Paella de mariscos is a traditional Spanish dish made with rice, seafood, vegetables, and spices. The rice is typically cooked in a large, shallow pan called a paella pan, and the seafood is added towards the end of cooking to prevent it from overcooking.\r\nThe most common types of seafood used in paella de mariscos are shrimp, mussels, clams, and squid. The vegetables used in paella de mariscos can vary depending on the region and the cook's preference, but they often include onions, tomatoes, peppers, and peas.",
+    "price": "18.10",
+    "dish_type": 10,
+    "cooks": [
+      15,
+      17,
+      4,
+      6
+    ]
+  }
+},
+{
+  "model": "kitchen.dish",
+  "pk": 22,
+  "fields": {
+    "name": "Merluza a la Vasca",
+    "description": "Merluza a la Vasca is a traditional Basque dish made with hake fish, white wine, garlic, parsley, and olive oil. The hake is typically cooked in a large pan over medium heat until it is cooked through. The white wine, garlic, parsley, and olive oil are then added to the pan and cooked for a few minutes until the sauce has thickened.",
+    "price": "16.70",
+    "dish_type": 10,
+    "cooks": [
+      15,
+      6,
+      19
+    ]
+  }
+},
+{
+  "model": "kitchen.dish",
+  "pk": 23,
+  "fields": {
+    "name": "Israeli Salad",
+    "description": "A refreshing and flavorful salad made with diced tomatoes, cucumbers, onions, and parsley, dressed in olive oil and lemon juice. Israeli salad is often served as a side dish to falafel, hummus, or pita bread.",
+    "price": "10.30",
+    "dish_type": 14,
+    "cooks": [
+      19,
+      20
+    ]
+  }
+},
+{
+  "model": "kitchen.dish",
+  "pk": 24,
+  "fields": {
+    "name": "Esqueixada",
+    "description": "Esqueixada is made with salt cod, tomatoes, onions, green peppers, black olives, and olive oil. The salt cod is soaked overnight to remove the excess salt, and is then flaked into small pieces. The tomatoes, onions, green peppers, and black olives are then diced and added to the salt cod. The salad is then dressed with olive oil and served chilled or at room temperature.",
+    "price": "11.10",
+    "dish_type": 14,
+    "cooks": [
+      6
+    ]
+  }
+},
+{
+  "model": "kitchen.dish",
+  "pk": 25,
+  "fields": {
+    "name": "Cesar Salad",
+    "description": "The Cesar salad is made with romaine lettuce, Parmesan cheese, croutons, and a creamy anchovy dressing. The romaine lettuce is crisp and refreshing, the Parmesan cheese is sharp and nutty, the croutons are crunchy and flavorful, and the anchovy dressing adds a touch of saltiness and funk.",
+    "price": "10.90",
+    "dish_type": 14,
+    "cooks": [
+      15,
+      17,
+      6,
+      19,
+      20
+    ]
+  }
+},
+{
+  "model": "kitchen.dish",
+  "pk": 26,
+  "fields": {
+    "name": "Goulash",
+    "description": "A soup that is made with tender beef or lamb, simmered for hours until it is fall-apart tender. A soup that is packed with vegetables, such as onions, carrots, potatoes, and paprika. A soup that is perfect for a cold winter day. That is goulash soup, a traditional Central and Eastern European dish that is sure to tantalize your taste buds.",
+    "price": "12.30",
+    "dish_type": 13,
+    "cooks": [
+      15,
+      17,
+      8,
+      18
+    ]
+  }
+},
+{
+  "model": "kitchen.dish",
+  "pk": 27,
+  "fields": {
+    "name": "Borscht",
+    "description": "A soup that is made with tender beets, cabbage, carrots, and onions, simmered in a beef or vegetable broth until they are fall-apart tender. A soup that is perfect for a cold winter day. That is borscht, a traditional Eastern European dish that is sure to tantalize your taste buds.\r\nBorscht is the perfect dish for any occasion. It is both hearty and flavorful and is sure to please everyone at the table.",
+    "price": "13.20",
+    "dish_type": 13,
+    "cooks": [
+      17,
+      8,
+      18
+    ]
+  }
+},
+{
+  "model": "kitchen.dish",
+  "pk": 28,
+  "fields": {
+    "name": "Chicken Kyiv",
+    "description": "A classic Ukrainian dish made with a chicken breast that is pounded thin, wrapped around a cold butter filling, and then breaded and fried. Chicken Kyiv is typically served with mashed potatoes or rice and a side of vegetables.",
+    "price": "15.90",
+    "dish_type": 15,
+    "cooks": [
+      17,
+      18
+    ]
+  }
+},
+{
+  "model": "kitchen.dish",
+  "pk": 29,
+  "fields": {
+    "name": "Pecene Veprove Koleno",
+    "description": "A classic Czech dish made with a roasted pork knee. The pork knee is typically marinated in a mixture of beer, garlic, and spices, and then roasted until it is fall-apart tender. Pečené vepřové koleno is typically served with sauerkraut, dumplings, and a side of mustard.",
+    "price": "17.10",
+    "dish_type": 15,
+    "cooks": [
+      15,
+      17,
+      8
+    ]
+  }
+},
+{
+  "model": "kitchen.dish",
+  "pk": 30,
+  "fields": {
+    "name": "Vepro Kedlo Zelo",
+    "description": "A classic Czech dish that is both hearty and flavorful, with a perfect balance of meat, starch, and vegetables. A dish that is made with roasted pork, bread dumplings, and sauerkraut. A dish that is perfect for a special occasion or a weeknight meal. That is vepřo knedlo zelo, a classic Czech dish that is sure to tantalize your taste buds.",
+    "price": "15.70",
+    "dish_type": 15,
+    "cooks": [
+      17,
+      8,
+      18
+    ]
+  }
+},
+{
+  "model": "kitchen.dish",
+  "pk": 31,
+  "fields": {
+    "name": "Golabki",
+    "description": "Golabki is a traditional Polish dish made with cabbage leaves stuffed with a mixture of ground meat, rice, and onions. The cabbage rolls are then simmered in a tomato sauce until tender.",
+    "price": "14.90",
+    "dish_type": 15,
+    "cooks": [
+      17,
+      18
+    ]
+  }
+},
+{
+  "model": "kitchen.dish",
+  "pk": 32,
+  "fields": {
+    "name": "Varenyky",
+    "description": "Varenyky are a traditional Ukrainian dish that is both hearty and comforting, with a variety of delicious fillings to choose from. A dish that is made with dumplings filled with a mixture of potatoes, cheese, meat, or fruit. A dish that is perfect for a cold winter day or a special occasion. That is varenyky, a traditional Ukrainian dish that is sure to tantalize your taste buds.",
+    "price": "12.50",
+    "dish_type": 16,
+    "cooks": [
+      15,
+      17,
+      8,
+      18
+    ]
+  }
+},
+{
+  "model": "kitchen.dish",
+  "pk": 33,
+  "fields": {
+    "name": "Pierogi",
+    "description": "Pierogi are a traditional Eastern European dish made with dumplings filled with a variety of savory or sweet fillings. The dumplings are typically boiled or pan-fried and served with a side of sour cream or fried onions.",
+    "price": "12.00",
+    "dish_type": 16,
+    "cooks": [
+      4,
+      8,
+      18
+    ]
+  }
+},
+{
+  "model": "kitchen.dish",
+  "pk": 34,
+  "fields": {
+    "name": "Khinkali",
+    "description": "A dumpling that is made with a mixture of meat, vegetables, and spices, and is simmered in a broth until it is cooked through. A dumpling that is perfect for a cold winter day or a special occasion. That is khinkali, a traditional Georgian dish that is sure to tantalize your taste buds.",
+    "price": "12.30",
+    "dish_type": 16,
+    "cooks": []
+  }
+}
+]

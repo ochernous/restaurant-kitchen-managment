@@ -21,7 +21,7 @@ pip install -r requirements.txt
 python manage.py migrate
 python manage.py runserver
 ```
-Use the following command to load prepared data from fixture to test and debug your code:
+Use the following command to load prepared data from fixture:
 ```shell
 python manage.py loaddata restaurant_kitchen_db_data.json
 ```
