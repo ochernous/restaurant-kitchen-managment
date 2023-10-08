@@ -22,10 +22,10 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/4.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = os.environ.get("DJANGO_SECRET_KEY", "django-insecure-l40*aw22&8aq1ka6+@iv%6w0u(qzxzz$gswr%bdcs*%bav4+6y")
+SECRET_KEY = os.environ["DJANGO_SECRET_KEY"]
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = os.environ.get("DJANGO_DEBUG", "") != "False"
+DEBUG = "RENDER" not in os.environ
 
 ALLOWED_HOSTS = ["127.0.0.1"]
 
@@ -43,7 +43,6 @@ INSTALLED_APPS = [
     "kitchen",
     "crispy_forms",
     "crispy_bootstrap5",
-    # "crispy_bootstrap4",
 ]
 
 MIDDLEWARE = [
