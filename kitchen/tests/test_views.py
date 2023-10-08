@@ -14,6 +14,7 @@ class PublicDishTypeTest(TestCase):
         resp = self.client.get(DISH_TYPE_URL)
         self.assertNotEquals(resp.status_code, 200)
 
+
 class PrivateDishTypeTest(TestCase):
     def setUp(self) -> None:
         self.user = get_user_model().objects.create_user(
@@ -35,7 +36,10 @@ class PrivateDishTypeTest(TestCase):
 
     def test_search_dish_types(self):
         resp = self.client.get(DISH_TYPE_URL, {"name": "seafood"})
-        self.assertEquals(list(resp.context["dish_type_list"]), [self.dish_type1])
+        self.assertEquals(
+            list(resp.context["dish_type_list"]), [self.dish_type1]
+        )
+
 
 class PublicDishTest(TestCase):
     def test_login_required(self):
@@ -68,9 +72,7 @@ class PrivateDishTest(TestCase):
         resp = self.client.get(DISH_URL)
         self.assertEquals(resp.status_code, 200)
         dishes = Dish.objects.all()
-        self.assertEquals(
-            list(resp.context["dish_list"]), list(dishes)
-        )
+        self.assertEquals(list(resp.context["dish_list"]), list(dishes))
         self.assertTemplateUsed(resp, "kitchen/dish_list.html")
 
     def test_search_dishes(self):
@@ -100,9 +102,7 @@ class PrivateCookTest(TestCase):
         resp = self.client.get(COOK_URL)
         self.assertEquals(resp.status_code, 200)
         users = Cook.objects.all()
-        self.assertEquals(
-            list(resp.context["cook_list"]), list(users)
-        )
+        self.assertEquals(list(resp.context["cook_list"]), list(users))
         self.assertTemplateUsed(resp, "kitchen/cook_list.html")
 
     def test_search_users(self):
@@ -117,7 +117,7 @@ class PrivateCookTest(TestCase):
             "first_name": "Name",
             "last_name": "Surname",
             "email": "user@mail.com",
-            "years_of_experience": 3
+            "years_of_experience": 3,
         }
         self.client.post(reverse("kitchen:cook-create"), data=form_data)
         new_user = get_user_model().objects.get(username=form_data["username"])
@@ -125,4 +125,6 @@ class PrivateCookTest(TestCase):
         self.assertEquals(new_user.first_name, form_data["first_name"])
         self.assertEquals(new_user.last_name, form_data["last_name"])
         self.assertEquals(new_user.email, form_data["email"])
-        self.assertEquals(new_user.years_of_experience, form_data["years_of_experience"])
+        self.assertEquals(
+            new_user.years_of_experience, form_data["years_of_experience"]
+        )
