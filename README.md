@@ -6,7 +6,7 @@ Project for managing restaurant kitchen with cooks dishes and types of dishes
 
 ## Check it out!
 
-[Project deployed on Render](PAST_LINK_HERE)
+[Project deployed on Render](https://restaurant-kitchen-mate.onrender.com/)
 
 ## Installation
 
