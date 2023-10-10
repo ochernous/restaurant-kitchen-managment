@@ -29,7 +29,7 @@ After loading data from fixture you can use following superuser (or create anoth
 
 Login:```admin.user```
 
-Password:```18OeMrVrAs```
+Password:```8*xckde15scdo```
 
 ## Description
 This project is designed to improve communication and establish rules among cooks in the kitchen. It allows cooks to 
