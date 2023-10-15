@@ -75,8 +75,16 @@ urlpatterns = [
         under_construction_view,
         name="under-construction",
     ),
-    path("total-orders-month/", total_orders_month_view, name="total-orders-month"),
-    path("total-orders-week/", total_orders_week_view, name="total-orders-week"),
+    path(
+        "total-orders-month/",
+        total_orders_month_view,
+        name="total-orders-month"
+    ),
+    path(
+        "total-orders-week/",
+        total_orders_week_view,
+        name="total-orders-week"
+    ),
 ]
 
 app_name = "kitchen"
