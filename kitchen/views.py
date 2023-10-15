@@ -158,3 +158,11 @@ class CookDeleteView(LoginRequiredMixin, generic.DeleteView):
 
 def under_construction_view(request: HttpRequest) -> HttpResponse:
     return render(request, "kitchen/under_construction.html")
+
+
+def total_orders_month_view(request: HttpRequest) -> HttpResponse:
+    return render(request, "kitchen/total_orders_month.html")
+
+
+def total_orders_week_view(request: HttpRequest) -> HttpResponse:
+    return render(request, "kitchen/total_orders_week.html")
