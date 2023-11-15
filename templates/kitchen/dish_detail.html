@@ -1,0 +1,46 @@
+{% extends "base.html" %}
+
+{% block content %}
+  <hr>
+  <h1>{{ dish.name }}</h1>
+  <br>
+  <h5>Price: {{ dish.price }}</h5>
+  <h5>Dish Type: {{ dish.dish_type.name }}</h5>
+  <br>
+  <a href="{% url 'kitchen:dish-update' dish.pk %}" class="btn btn-secondary">Update</a>
+  <a href="{% url 'kitchen:dish-delete' dish.pk %}" class="btn btn-reddit">Delete</a>
+  <br>
+  <br>
+  <br>
+
+  {% if dish.cooks.all %}
+    <table class="table">
+      <tr>
+        <th>Username</th>
+        <th>First Name</th>
+        <th>Last Name</th>
+        <th>Email</th>
+      </tr>
+      {% for cook in dish.cooks.all %}
+        <tr>
+          <td><a href="{% url 'kitchen:cook-detail' cook.pk %}" style="color: mediumblue">{{ cook.username }}</a></td>
+          <td>{{ cook.first_name }}</td>
+          <td>{{ cook.last_name }}</td>
+          <td>{{ cook.email }}</td>
+        </tr>
+      {% endfor %}
+    </table>
+  {% else %}
+    <h4>There are no Cooks</h4>
+  {% endif %}
+
+  <div class="col-12 px-9">
+    <div class="card border-0 shadow">
+      <div class="card-body">
+        <h2 class="fs-5 fw-bold mb-1">About</h2>
+        <p>{{ dish.description }}</p>
+      </div>
+    </div>
+  </div>
+
+{% endblock %}

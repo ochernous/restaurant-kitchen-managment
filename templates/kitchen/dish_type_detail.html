@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+
+{% block content %}
+  <hr>
+  <h1>{{ dishtype }}</h1>
+  <br>
+  <a href="{% url 'kitchen:dish-type-update' dishtype.pk %}" class="btn btn-secondary">Update</a>
+  <a href="{% url 'kitchen:dish-type-delete' dishtype.pk %}" class="btn btn-reddit">Delete</a>
+  <br>
+  <br>
+  <br>
+
+  {% if dishtype.dishes.all %}
+    <table class="table">
+      <tr>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Price</th>
+      </tr>
+      {% for dish in dishtype.dishes.all %}
+        <tr>
+          <td>{{ dish.pk }}</td>
+          <td><a href="{% url 'kitchen:dish-detail' dish.pk %}" style="color: mediumblue;">{{ dish.name }}</a></td>
+          <td>{{ dish.price }}</td>
+        </tr>
+      {% endfor %}
+    </table>
+  {% else %}
+    <h4>There are no Dishes</h4>
+  {% endif %}
+{% endblock %}

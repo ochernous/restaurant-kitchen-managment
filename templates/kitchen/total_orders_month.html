@@ -1,0 +1,51 @@
+{% extends "base.html" %}
+
+{% block content %}
+  <hr>
+  <br>
+  <h2 style="text-align: center">Last Month</h2>
+  <br>
+  <div class="row">
+    <div class="col-12 col-xl-8" style="margin-left: auto; margin-right: auto">
+      <div class="card bg-yellow-100 border-0 shadow">
+        <div class="card-header d-sm-flex flex-row align-items-center flex-0">
+          <div class="d-block mb-3 mb-sm-0">
+            <div class="fs-5 fw-normal mb-2">Sales Value</div>
+            <h2 class="fs-3 fw-extrabold">$143 794</h2>
+            <div class="small mt-2">
+              <span class="fw-normal me-2">Profit growth</span>
+              <span class="fas fa-angle-up text-success"></span>
+              <span class="text-success fw-bold">7.38%</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <br>
+
+  <div class="row">
+    <div class="col-12 col-xl-8" style="margin-left: auto; margin-right: auto">
+      <div class="col-12 px-0 mb-4">
+        <div class="card border-0 shadow">
+          <div class="card-header d-flex flex-row align-items-center flex-0 border-bottom">
+            <div class="d-block">
+              <div class="h6 fw-normal text-gray mb-2">Total orders</div>
+              <h2 class="h3 fw-extrabold">387</h2>
+              <div class="small mt-2">
+                <span class="fas fa-angle-up text-success"></span>
+                <span class="text-success fw-bold">+ 11.2%</span>
+              </div>
+            </div>
+            <div class="d-block ms-auto">
+              <div class="d-flex align-items-center text-end">
+                <span class="dot rounded-circle bg-secondary me-2"></span>
+                <span class="fw-normal font-medium">August</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+{% endblock %}

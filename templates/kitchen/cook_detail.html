@@ -1,0 +1,37 @@
+{% extends "base.html" %}
+
+{% block content %}
+  <hr>
+  <h1>{{ cook.first_name }} {{ cook.last_name }} ({{ cook.username }})</h1>
+  <br>
+  <h5>Years of experience: {{ cook.years_of_experience }}</h5>
+  <br>
+  <h5>Email: {{ cook.email }}</h5>
+  <br>
+  <a href="{% url 'kitchen:cook-update' cook.pk %}" class="btn btn-secondary">Update</a>
+  <a href="{% url 'kitchen:cook-delete' cook.pk %}" class="btn btn-reddit">Delete</a>
+  <br>
+  <br>
+
+  {% if cook.dishes.all %}
+    <table class="table">
+      <tr>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Price</th>
+        <th>Dish Type</th>
+      </tr>
+      {% for dish in cook.dishes.all %}
+        <tr>
+          <td>{{ dish.pk }}</td>
+          <td><a href="{% url 'kitchen:dish-detail' dish.pk %}" style="color: mediumblue;">{{ dish.name }}</a></td>
+          <td>{{ dish.price }}</td>
+          <td>{{ dish.dish_type.name }}</td>
+        </tr>
+      {% endfor %}
+    </table>
+  {% else %}
+    <h4>There are no Dishes</h4>
+  {% endif %}
+
+{% endblock %}
